@@ -3,9 +3,10 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ui-poc-ember-josh',
+    podModulePrefix: 'ui-poc-ember-josh/pods',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
