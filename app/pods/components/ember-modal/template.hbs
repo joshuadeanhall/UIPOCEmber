@@ -1,0 +1,21 @@
+{{#bs-modal}}
+<div class="modal fade" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span>{{title}}</span>
+                <span class="close icon-remove" data-dismiss="modal"></span>
+            </div>
+            <div class="modal-body">
+              {{yield}}
+            </div>
+            <div class="modal-footer modal-button-bar">
+                {{#unless hideCancel}}
+                    <button type="button" class="btn btn-default icon-remove" data-dismiss="modal">{{cancelLabel}}</button>
+                {{/unless}}
+                <button type="button" class="btn btn-primary blue icon-ok" {{action 'ok' model}}>{{okLabel}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/bs-modal}}

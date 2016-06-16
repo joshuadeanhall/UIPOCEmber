@@ -3,9 +3,13 @@
     <div>
         <form>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
-                        <label for="comicBookHero">Favorite Comic Book Superhero</label>
+                        <label for="comicBookHero">Favorite Comic Book Superhero
+                        {{#custom-tooltip}}
+                            <span data-toggle="tooltip" title="Favorite Comic Book Superhero is used to tailor your payroll experience." data-placement="right" class="icon-info-circle"></span>
+                        {{/custom-tooltip}}
+                        </label>
                         <input type="text" class="form-control" id="comicBookHero" placeholder="e.g. Batman">
                     </div>
                 </div>
@@ -44,7 +48,104 @@
     <h3>Modal</h3>
     <div>
         <button type="button" class="btn btn-primary" aria-label="Left Align">
-            <span class="glyphicon glyphicon-align-left" aria-hidden="true">Open Modal</span>
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true" {{action "toggleModal"}}>Open Modal</span>
         </button>
     </div>
 </div>
+
+
+{{#bs-modal body=false footer=false  title="Open Modal" open=showModal}}
+  {{#bs-modal-body}}
+      <form>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="dropdown">Dropdown</label>
+                      <select class="form-control" id="u70_input" title="Dropdown">
+                          <option selected="" value="Select">Select</option>
+                          <option value="Do">Do</option>
+                          <option value="Ray">Ray</option>
+                          <option value="Mi">Mi</option>
+                          <option value="Fa">Fa</option>
+                          <option value="So">So</option>
+                          <option value="La">La</option>
+                          <option value="Ti">Ti</option>
+                          <option value="Do">Do</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="form-group">
+                      <label for="selectDate">Select Date<span class="required">*</span></label>
+                      <input type="text" class="form-control" id="selectDate" placeholder="mm/dd/yyyy">
+                  </div>
+              </div>
+          </div>
+      </form>
+
+      <div class="radio">
+          <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Radio Button
+          </label>
+      </div>
+
+
+
+
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+              <td>Date</td>
+              <td>Description</td>
+              <td><div class="pull-right">Actions</div></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>01/01/2016</td>
+              <td>Simple Ceasar sniffed his sifter</td>
+              <td>
+                {{#bs-dropdown}}
+                  {{#bs-dropdown-button}}{{/bs-dropdown-button}}
+                  {{#bs-dropdown-menu}}
+                      <li>{{#link-to "index"}}View Request Details{{/link-to}}</li>
+                  {{/bs-dropdown-menu}}
+                {{/bs-dropdown}}
+              </td>
+          </tr>
+          <tr>
+              <td>06/12/15 - 06/15/15</td>
+              <td>Seized his knees</td>
+              <td>
+                {{#bs-dropdown}}
+                  {{#bs-dropdown-button}}{{/bs-dropdown-button}}
+                  {{#bs-dropdown-menu}}
+                      <li>{{#link-to "index"}}Cancel Request{{/link-to}}</li>
+                      <li>{{#link-to "index"}}View/Edit Request{{/link-to}}</li>
+                  {{/bs-dropdown-menu}}
+                {{/bs-dropdown}}
+              </td>
+          </tr>
+          <tr>
+              <td>04/27/2015</td>
+              <td>And sneezed</td>
+              <td>
+                {{#bs-dropdown}}
+                  {{#bs-dropdown-button}}{{/bs-dropdown-button}}
+                  {{#bs-dropdown-menu}}
+                      <li>{{#link-to "index"}}View Request Details{{/link-to}}</li>
+                  {{/bs-dropdown-menu}}
+                {{/bs-dropdown}}
+              </td>
+          </tr>
+        </tbody>
+    </table>
+  {{/bs-modal-body}}
+  {{#bs-modal-footer as |footer|}}
+    {{#bs-button action=(action "close" target=footer) type=""}}<span class="glyphicon glyphicon-star" aria-hidden="true">Cancel</span>{{/bs-button}}
+    {{#bs-button buttonType="submit" action=(action "close" target=footer) type="primary"}}<span class="glyphicon glyphicon-star" aria-hidden="true"></span>Save{{/bs-button}}
+  {{/bs-modal-footer}}
+{{/bs-modal}}
+
+
