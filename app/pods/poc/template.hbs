@@ -93,10 +93,6 @@
           </label>
       </div>
 
-
-
-
-
     <table class="table table-striped paycor-table">
         <thead>
           <tr>
@@ -106,43 +102,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-              <td>01/01/2016</td>
-              <td>Simple Ceasar sniffed his sifter</td>
-              <td>
-                {{#bs-dropdown}}
-                  {{#bs-dropdown-button}}<span class="icon-document"></span><span class="icon-document"></span>{{/bs-dropdown-button}}
-                  {{#bs-dropdown-menu}}
-                      <li>{{#link-to "index"}}View Request Details{{/link-to}}</li>
-                  {{/bs-dropdown-menu}}
-                {{/bs-dropdown}}
-              </td>
-          </tr>
-          <tr>
-              <td>06/12/15 - 06/15/15</td>
-              <td>Seized his knees</td>
-              <td>
-                {{#bs-dropdown}}
-                  {{#bs-dropdown-button}}<span class="icon-document"></span><span class="icon-document"></span>{{/bs-dropdown-button}}
-                  {{#bs-dropdown-menu}}
-                      <li>{{#link-to "index"}}Cancel Request{{/link-to}}</li>
-                      <li>{{#link-to "index"}}View/Edit Request{{/link-to}}</li>
-                  {{/bs-dropdown-menu}}
-                {{/bs-dropdown}}
-              </td>
-          </tr>
-          <tr>
-              <td>04/27/2015</td>
-              <td>And sneezed</td>
-              <td>
-                {{#bs-dropdown}}
-                  {{#bs-dropdown-button}}<span class="icon-document"></span><span class="icon-document"></span>{{/bs-dropdown-button}}
-                  {{#bs-dropdown-menu}}
-                      <li>{{#link-to "index"}}View Request Details{{/link-to}}</li>
-                  {{/bs-dropdown-menu}}
-                {{/bs-dropdown}}
-              </td>
-          </tr>
+          {{#each model.records as |record|}}
+            <tr>
+                <td>
+                    {{record.dateStart}} {{#if record.dateEnd}} - {{record.dateEnd}}{{/if}}
+                </td>
+                <td>
+                  {{content-editable value=record.description placeholder="Please enter a description" type="text"}}
+                </td>
+                <td>
+                  {{#bs-dropdown}}
+                    {{#bs-dropdown-button}}<span class="icon-document"></span><span class="icon-document"></span>{{/bs-dropdown-button}}
+                    {{#bs-dropdown-menu}}
+                      {{#each record.actions as |recordAction|}}
+                          <li>{{#link-to "index"}}{{recordAction.description}}{{/link-to}}</li>
+                      {{/each}}
+                    {{/bs-dropdown-menu}}
+                  {{/bs-dropdown}}
+                </td>
+            </tr>
+          {{/each}}
         </tbody>
     </table>
   {{/bs-modal-body}}
