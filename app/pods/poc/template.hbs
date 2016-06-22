@@ -5,18 +5,18 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="comicBookHero">Favorite Comic Book Superhero
+                        <label for="comicBookHero">Favorite Comic Book Superhero</label>
                         {{#custom-tooltip}}
-                            <span data-toggle="tooltip" title="Favorite Comic Book Superhero is used to tailor your payroll experience." data-placement="right" class="icon-info-circle"></span>
+                            <button class="btn-icon" type="button" data-toggle="tooltip" data-placement="right"  title="Favorite Comic Book Superhero is used to tailor your payroll experience."><span class="icon-info-circle"></span></button>
                         {{/custom-tooltip}}
-                        </label>
+
                         <input type="text" class="form-control" id="comicBookHero" placeholder="e.g. Batman">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group {{if sideKickValid "valid" "has-error"}}">
                         <label for="heroSideKick">Favorite Comic Book Sidekick <span class="required">*</span></label>
-                        {{input type="text" class="form-control" value=sideKick  placeholder="e.g. Robin" focus-out="validateSidekick"}}
+                        {{input type="text" class="form-control" value=sideKick  placeholder="e.g. Robin" focus-out="validateSidekick" on="change"}}
                         <div class="{{if sideKickValid "valid" "carrot"}}"></div>
                         {{#unless sideKickValid}}
                           <span class="input-error">Sidekick is a required field.</span>

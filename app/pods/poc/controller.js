@@ -1,21 +1,26 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sideKickValid: true,
   showModal: false,
   sideKick: '',
   myDate: new Date(),
+  sideKickValid: function() {
+
+    if(this.get('sideKick') !== 'Robin' && this.get('sideKick') !== '') {
+      return false;
+    }
+    else {
+      return true;
+    }
+
+  }.property('sideKick'),
   actions: {
     toggleModal: function () {
       this.toggleProperty('showModal');
     },
+
     validateSidekick() {
-      if(this.get('sideKick') !== 'Robin') {
-        this.set('sideKickValid', false);
-      }
-      else {
-        this.set('sideKickValid', true);
-      }
+
     }
   }
 });

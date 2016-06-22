@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   show: function() {
 
     var self = this;
-      self.$('[data-toggle="tooltip"]').tooltip({trigger: 'click',
+      self.$('[data-toggle="tooltip"]').tooltip({trigger: 'focus',
         template: '<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
       });
   }.on('didInsertElement')
