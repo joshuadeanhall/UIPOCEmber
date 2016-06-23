@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d80f0198-1237-4f3e-99c3-f83a8563d0ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pods/components/custom-tooltip/component.js" afterPath="$PROJECT_DIR$/app/pods/components/custom-tooltip/component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pods/poc/controller.js" afterPath="$PROJECT_DIR$/app/pods/poc/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pods/poc/template.hbs" afterPath="$PROJECT_DIR$/app/pods/poc/template.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app.less" afterPath="$PROJECT_DIR$/app/styles/app.less" />
     </list>
     <ignored path="ui-poc-ember-josh.iws" />
@@ -37,17 +33,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+            <state relative-caret-position="1325">
+              <caret line="303" column="12" selection-start-line="303" selection-start-column="1" selection-end-line="303" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/pods/poc/controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -88,9 +84,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/pods/poc/route.js" />
         <option value="$PROJECT_DIR$/app/pods/components/custom-tooltip/component.js" />
-        <option value="$PROJECT_DIR$/app/styles/app.less" />
         <option value="$PROJECT_DIR$/app/pods/poc/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/poc/controller.js" />
+        <option value="$PROJECT_DIR$/app/styles/app.less" />
       </list>
     </option>
   </component>
@@ -162,6 +158,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UIPOCEmber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UIPOCEmber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,15 +311,15 @@
       <workItem from="1466105622117" duration="877000" />
       <workItem from="1466344499631" duration="2136000" />
       <workItem from="1466348181006" duration="1848000" />
-      <workItem from="1466358598296" duration="4052000" />
+      <workItem from="1466358598296" duration="4828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33454000" />
+    <option name="totallyTimeSpent" value="34230000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25703126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -635,14 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/poc/template.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -655,6 +661,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1325">
+          <caret line="303" column="12" selection-start-line="303" selection-start-column="1" selection-end-line="303" selection-end-column="12" />
           <folding />
         </state>
       </provider>
